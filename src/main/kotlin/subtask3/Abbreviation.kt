@@ -2,8 +2,13 @@ package subtask3
 
 class Abbreviation {
 
-    // TODO: Complete the following function
     fun abbreviationFromA(a: String, b: String): String {
-        throw NotImplementedError("Not implemented")
-    }
+      return when { a.filter { b.contains(it,true) }.equals(b,true)
+              ||a.contains(b,true)-> "YES"
+
+          else -> "NO"
+            }
+        }
 }
+
+

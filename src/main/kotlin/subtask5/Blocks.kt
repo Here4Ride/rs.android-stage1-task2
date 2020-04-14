@@ -26,6 +26,6 @@ class Blocks {
                 if (Date < it) Date = it}
             return (Date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")))
         }
-        throw NotImplementedError("Not implemented")
+        throw IllegalArgumentException("blockB does not match the task")
     }
 }

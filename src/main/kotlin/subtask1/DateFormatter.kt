@@ -11,7 +11,7 @@ class DateFormatter {
     fun toTextDay(day: String, month: String, year: String): String {
         return try {
             val formatter = LocalDate.of(year.toInt(), month.toInt(), day.toInt())
-            formatter.format(DateTimeFormatter.ofPattern("dd MMMM, EEEE", Locale.getDefault()))
+            formatter.format(DateTimeFormatter.ofPattern("dd MMMM, EEEE", Locale("RU")))
         } catch (e: Exception) {
             "Такого дня не существует"
         }
